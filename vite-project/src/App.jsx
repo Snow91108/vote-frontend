@@ -1,11 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Sum from "./components/Sum";
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [products, setProducts]= useState();
 
+  useEffect( ()=>{
+  async function getProduct() {
+  try {
+    const response =await fetch('https://fakestoreapi.com/products/1');
+    const data = await response.json();
+    console.log("all products", data);
+  } catch (error) {
+    console.log("error :", error)
+  }
+}
+getProduct();
+})
   return (
     <>
       <div>
@@ -18,6 +34,10 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <br />
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
