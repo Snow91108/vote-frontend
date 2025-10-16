@@ -17,8 +17,9 @@ createRoot(document.getElementById('root')).render(
     {/* <App3 /> */}
        {/* <Parent />
       <App1 />  */}
-      <Child1 />
-      <Child2 />
+      {/* <Child1 /> */}
+      {/* <Child2 /> */}
+      <Parent />
 
   </StrictMode>,
 )

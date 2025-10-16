@@ -1,11 +1,13 @@
-import React from 'react';
-// function Child3({user}) {
-    
-//     return <h2>{user.name}, age is {user.age}</h2>
-// }
+import React from "react";
+import Child4 from "./Child4";
+
 function Child3(props) {
-    return(
-        <h2> props.sendMsg("hello") </h2>
-    )
+  return (
+    <div>
+      <h3>Child3 Component</h3>
+      <Child4 sendMessage={props.sendMessage} />
+    </div>
+  );
 }
+
 export default Child3;

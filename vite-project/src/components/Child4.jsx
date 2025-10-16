@@ -1,15 +1,16 @@
+import React from "react";
 
-import React from 'react';
-function Child4() {
-//     const Greeting= {name:"john", age:23 }
-//     }
-    
-// function Greeting(props) {
-//     return <h2>hello {props.name}, your age is {props.age}</h2>
+function Child4(props) {
+  const message = "Hello from Child4";
 
-    return(
-        <h2> props.sendMsg("Good morning") </h2>
-    )
-
+  return (
+    <div>
+      <h3>Child4 Component</h3>
+      <button onClick={() => props.sendMessage(message)}>
+        Send Message to Parent
+      </button>
+    </div>
+  );
 }
+
 export default Child4;

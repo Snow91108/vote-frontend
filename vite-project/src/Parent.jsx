@@ -1,18 +1,18 @@
 import React from 'react';
 import Child1 from './components/Child1';
-import Child2 from './components/Child2';
-import Child3 from './components/Child3';
 
 function Parent() {
-    const user = { name: "ram", age: 23 };
+ 
+  const handleMessage = (message) => {
+    alert("Received in Parent: " + message);
+  };
 
-    return (
-        <div>
-            <Child1 user={user} />
-            <Child2 user={user} />
-            <Child3 user={user} />
-        </div>
-    );
+  return (
+    <div>
+      <h2>App (Parent) Component</h2>
+      <Child1 sendMessage={handleMessage} />
+    </div>
+  );
 }
 
 export default Parent;
