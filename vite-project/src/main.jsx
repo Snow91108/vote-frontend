@@ -8,6 +8,7 @@ import App3 from "./App3.jsx";
 import Parent from "./Parent.jsx";
 import Child1 from "./components/Child1.jsx"
 import Child2 from "./components/Child2.jsx"
+import ComponentA from "./ComponentA";
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -19,7 +20,8 @@ createRoot(document.getElementById('root')).render(
       <App1 />  */}
       {/* <Child1 /> */}
       {/* <Child2 /> */}
-      <Parent />
+      {/* <Parent /> */}
+      <ComponentA />
 
   </StrictMode>,
 )
